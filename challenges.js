@@ -1,7 +1,7 @@
 
 var requireUserCountWithinTime = function(userCount, timeLimit) {
     return {
-        description: "Transport <span class='emphasis-color'>" + userCount + "</span> people in <span class='emphasis-color'>" + timeLimit.toFixed(0) + "</span> seconds or less",
+        description: "TransportJN <span class='emphasis-color'>" + userCount + "</span> people in <span class='emphasis-color'>" + timeLimit.toFixed(0) + "</span> seconds or less",
         evaluate: function(world) {
             if(world.elapsedTime >= timeLimit || world.transportedCounter >= userCount) {
                 return world.elapsedTime <= timeLimit && world.transportedCounter >= userCount;
